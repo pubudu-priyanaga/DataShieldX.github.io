@@ -1,1 +1,475 @@
-<h1>hiiiiiiiiiiiiiiiii</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ML-DLP: Leveraging Machine Learning for Data Loss Prevention</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .hero-bg {
+            background: linear-gradient(135deg, #3b82f6 0%, #1e40af 100%);
+        }
+        .nav-link {
+            position: relative;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #3b82f6;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        .feature-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+    </style>
+</head>
+<body class="font-sans antialiased text-gray-800 bg-gray-50">
+    <!-- Navigation Bar -->
+    <nav class="bg-white shadow-md fixed w-full z-10">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center">
+                    <div class="text-xl font-bold text-blue-600">ML-DLP</div>
+                </div>
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="#home" class="nav-link py-2 text-gray-700 hover:text-blue-600">Home</a>
+                    <a href="#domain" class="nav-link py-2 text-gray-700 hover:text-blue-600">Domain</a>
+                    <a href="#milestones" class="nav-link py-2 text-gray-700 hover:text-blue-600">Milestones</a>
+                    <a href="#documents" class="nav-link py-2 text-gray-700 hover:text-blue-600">Documents</a>
+                    <a href="#presentations" class="nav-link py-2 text-gray-700 hover:text-blue-600">Presentations</a>
+                    <a href="#about" class="nav-link py-2 text-gray-700 hover:text-blue-600">About Us</a>
+                    <a href="#contact" class="nav-link py-2 text-gray-700 hover:text-blue-600">Contact</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="outline-none">
+                        <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div id="mobile-menu" class="hidden md:hidden">
+                <div class="flex flex-col space-y-4 py-4">
+                    <a href="#home" class="text-gray-700 hover:text-blue-600">Home</a>
+                    <a href="#domain" class="text-gray-700 hover:text-blue-600">Domain</a>
+                    <a href="#milestones" class="text-gray-700 hover:text-blue-600">Milestones</a>
+                    <a href="#documents" class="text-gray-700 hover:text-blue-600">Documents</a>
+                    <a href="#presentations" class="text-gray-700 hover:text-blue-600">Presentations</a>
+                    <a href="#about" class="text-gray-700 hover:text-blue-600">About Us</a>
+                    <a href="#contact" class="text-gray-700 hover:text-blue-600">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-bg pt-24 pb-12">
+        <div class="container mx-auto px-4 py-16">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 text-white">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-4">Leveraging Machine Learning for Data Loss Prevention</h1>
+                    <p class="text-lg mb-8">Our innovative DLP solution combines advanced machine learning techniques with homomorphic encryption to protect sensitive data from exfiltration attempts.</p>
+                    <div class="flex space-x-4">
+                        <a href="#domain" class="bg-white text-blue-600 px-6 py-2 rounded-md font-medium hover:bg-blue-50 transition">Learn More</a>
+                        <a href="#documents" class="border border-white text-white px-6 py-2 rounded-md font-medium hover:bg-white hover:text-blue-600 transition">View Documents</a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 mt-12 md:mt-0 flex justify-center">
+                    <div class="bg-white p-6 rounded-lg shadow-lg max-w-md">
+                        <div class="flex justify-center">
+                            <i class="fas fa-shield-alt text-5xl text-blue-600 mb-4"></i>
+                        </div>
+                        <h2 class="text-2xl font-bold text-gray-800 mb-4 text-center">Advanced DLP System</h2>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                <span>Intelligent data classification and blocking</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                <span>Dynamic risk scoring framework</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                <span>Endpoint security with webcam verification</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                <span>Deep learning steganalysis engine</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Domain Section -->
+    <section id="domain" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Research Domain</h2>
+            
+            <div class="mb-12">
+                <h3 class="text-2xl font-semibold mb-4">Literature Survey</h3>
+                <p class="text-gray-700 mb-4">Our research builds upon existing DLP solutions, which primarily rely on content inspection and rule-based blocking. We identified that traditional DLP tools face limitations in tackling modern threats, which require more adaptive and multi-layered protection methods. Comparative analysis of commercial DLP tools like Symantec (Broadcom), Forcepoint, Trellix, and Microsoft Purview revealed gaps in detection capabilities and performance overhead concerns.</p>
+                <p class="text-gray-700">Open-source alternatives such as MyDLP provide basic monitoring features but lack comprehensive protection against sophisticated exfiltration attempts and insider threats. Our literature review also covered privacy-preserving data inspection techniques, user behavior analytics for insider threat detection, and advancements in deep learning for steganalysis.</p>
+            </div>
+            
+            <div class="mb-12">
+                <h3 class="text-2xl font-semibold mb-4">Research Gap</h3>
+                <p class="text-gray-700">Despite advancements in DLP technologies, several critical gaps remain:</p>
+                <ul class="list-disc list-inside space-y-2 text-gray-700 mt-4 ml-4">
+                    <li>Existing DLP solutions lack integration of advanced machine learning for real-time detection</li>
+                    <li>Limited capabilities in detecting covert data exfiltration channels such as steganography</li>
+                    <li>Insufficient focus on user behavior analysis and risk scoring</li>
+                    <li>Inadequate mechanisms for secure logging of sensitive data breaches</li>
+                    <li>Poor multi-platform support across different operating systems</li>
+                </ul>
+            </div>
+            
+            <div class="mb-12">
+                <h3 class="text-2xl font-semibold mb-4">Research Problem</h3>
+                <p class="text-gray-700">Organizations face significant risks through data exfiltration combined with insider threats and compliance violations, especially under regulatory standards such as PCI DSS, GDPR, and HIPAA. Existing solutions fail to provide comprehensive protection against sophisticated exfiltration attempts while maintaining operational efficiency.</p>
+            </div>
+            
+            <div class="mb-12">
+                <h3 class="text-2xl font-semibold mb-4">Research Objectives</h3>
+                <ol class="list-decimal list-inside space-y-2 text-gray-700 mt-4 ml-4">
+                    <li>Develop an intelligent data classification system capable of detecting sensitive information across multiple regulatory frameworks</li>
+                    <li>Create a dynamic risk scoring framework that assigns risk levels based on user violations and behavioral patterns</li>
+                    <li>Implement an endpoint security module for webcam-based login verification and phishing detection</li>
+                    <li>Design a deep learning-based steganalysis engine to detect data exfiltration via steganographic images</li>
+                    <li>Integrate homomorphic encryption for secure logging of sensitive data breaches</li>
+                </ol>
+            </div>
+            
+            <div class="mb-12">
+                <h3 class="text-2xl font-semibold mb-4">Methodology</h3>
+                <p class="text-gray-700 mb-4">Our research methodology encompasses:</p>
+                <div class="grid md:grid-cols-2 gap-6 mt-6">
+                    <div class="bg-blue-50 p-6 rounded-lg shadow-sm">
+                        <h4 class="font-semibold text-xl mb-3">Data Collection & Preparation</h4>
+                        <p>Using datasets such as ALASKA2, BOSSbase, and BOWS2 for steganalysis model training, along with synthetic and real samples of sensitive data for classification model training.</p>
+                    </div>
+                    <div class="bg-blue-50 p-6 rounded-lg shadow-sm">
+                        <h4 class="font-semibold text-xl mb-3">Model Development</h4>
+                        <p>Implementing machine learning models including ALBERT for PII detection, CNN architectures for steganalysis, and ensemble methods for phishing URL detection.</p>
+                    </div>
+                    <div class="bg-blue-50 p-6 rounded-lg shadow-sm">
+                        <h4 class="font-semibold text-xl mb-3">System Integration</h4>
+                        <p>Combining multiple components into a unified DLP system with homomorphic encryption for secure logging and a risk scoring framework for insider threat detection.</p>
+                    </div>
+                    <div class="bg-blue-50 p-6 rounded-lg shadow-sm">
+                        <h4 class="font-semibold text-xl mb-3">Performance Evaluation</h4>
+                        <p>Conducting comprehensive testing to measure accuracy, precision, recall, and F1-scores across all system components.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div>
+                <h3 class="text-2xl font-semibold mb-4">Technologies Used</h3>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <div class="p-4 bg-gray-100 rounded-lg text-center">
+                        <i class="fab fa-python text-4xl text-blue-600 mb-2"></i>
+                        <p class="font-medium">Python</p>
+                    </div>
+                    <div class="p-4 bg-gray-100 rounded-lg text-center">
+                        <i class="fas fa-brain text-4xl text-blue-600 mb-2"></i>
+                        <p class="font-medium">PyTorch</p>
+                    </div>
+                    <div class="p-4 bg-gray-100 rounded-lg text-center">
+                        <i class="fas fa-chart-line text-4xl text-blue-600 mb-2"></i>
+                        <p class="font-medium">Scikit-learn</p>
+                    </div>
+                    <div class="p-4 bg-gray-100 rounded-lg text-center">
+                        <i class="fas fa-language text-4xl text-blue-600 mb-2"></i>
+                        <p class="font-medium">NLTK</p>
+                    </div>
+                    <div class="p-4 bg-gray-100 rounded-lg text-center">
+                        <i class="fas fa-lock text-4xl text-blue-600 mb-2"></i>
+                        <p class="font-medium">Node-SEAL</p>
+                    </div>
+                    <div class="p-4 bg-gray-100 rounded-lg text-center">
+                        <i class="fas fa-robot text-4xl text-blue-600 mb-2"></i>
+                        <p class="font-medium">HuggingFace</p>
+                    </div>
+                    <div class="p-4 bg-gray-100 rounded-lg text-center">
+                        <i class="fas fa-terminal text-4xl text-blue-600 mb-2"></i>
+                        <p class="font-medium">Selenium</p>
+                    </div>
+                    <div class="p-4 bg-gray-100 rounded-lg text-center">
+                        <i class="fas fa-server text-4xl text-blue-600 mb-2"></i>
+                        <p class="font-medium">Web APIs</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Milestones Section -->
+    <section id="milestones" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Project Milestones</h2>
+            
+            <div class="relative">
+                <!-- Vertical line -->
+                <div class="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-blue-200"></div>
+                
+                <!-- Milestone 1 -->
+                <div class="relative mb-16">
+                    <div class="flex items-center mb-4">
+                        <div class="w-1/2 pr-8 text-right">
+                            <h3 class="text-xl font-semibold">Project Proposal</h3>
+                            <p class="text-gray-600">January 15, 2025</p>
+                        </div>
+                        <div class="absolute left-1/2 transform -translate-x-1/2 w-8 h-8 rounded-full bg-blue-500 border-4 border-white"></div>
+                        <div class="w-1/2 pl-8">
+                            <p class="font-medium">Marks: 10%</p>
+                        </div>
+                    </div>
+                    <div class="flex">
+                        <div class="w-1/2"></div>
+                        <div class="w-1/2 pl-8">
+                            <p class="text-gray-700">Initial project proposal outlining the research problem, objectives, and proposed methodology.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Milestone 2 -->
+                <div class="relative mb-16">
+                    <div class="flex items-center mb-4">
+                        <div class="w-1/2 pr-8 text-right">
+                            <p class="font-medium">Marks: 20%</p>
+                        </div>
+                        <div class="absolute left-1/2 transform -translate-x-1/2 w-8 h-8 rounded-full bg-blue-500 border-4 border-white"></div>
+                        <div class="w-1/2 pl-8">
+                            <h3 class="text-xl font-semibold">Progress Presentation-1</h3>
+                            <p class="text-gray-600">February 28, 2025</p>
+                        </div>
+                    </div>
+                    <div class="flex">
+                        <div class="w-1/2 pr-8 text-right">
+                            <p class="text-gray-700">First progress review presenting literature survey findings and initial system architecture design.</p>
+                        </div>
+                        <div class="w-1/2"></div>
+                    </div>
+                </div>
+                
+                <!-- Milestone 3 -->
+                <div class="relative mb-16">
+                    <div class="flex items-center mb-4">
+                        <div class="w-1/2 pr-8 text-right">
+                            <h3 class="text-xl font-semibold">Progress Presentation-2</h3>
+                            <p class="text-gray-600">April 10, 2025</p>
+                        </div>
+                        <div class="absolute left-1/2 transform -translate-x-1/2 w-8 h-8 rounded-full bg-blue-500 border-4 border-white"></div>
+                        <div class="w-1/2 pl-8">
+                            <p class="font-medium">Marks: 20%</p>
+                        </div>
+                    </div>
+                    <div class="flex">
+                        <div class="w-1/2"></div>
+                        <div class="w-1/2 pl-8">
+                            <p class="text-gray-700">Second progress review showcasing prototype implementation and preliminary results.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Milestone 4 -->
+                <div class="relative mb-16">
+                    <div class="flex items-center mb-4">
+                        <div class="w-1/2 pr-8 text-right">
+                            <p class="font-medium">Marks: 30%</p>
+                        </div>
+                        <div class="absolute left-1/2 transform -translate-x-1/2 w-8 h-8 rounded-full bg-blue-500 border-4 border-white"></div>
+                        <div class="w-1/2 pl-8">
+                            <h3 class="text-xl font-semibold">Final Assessment</h3>
+                            <p class="text-gray-600">May 25, 2025</p>
+                        </div>
+                    </div>
+                    <div class="flex">
+                        <div class="w-1/2 pr-8 text-right">
+                            <p class="text-gray-700">Final project submission with complete implementation, evaluation results, and documentation.</p>
+                        </div>
+                        <div class="w-1/2"></div>
+                    </div>
+                </div>
+                
+                <!-- Milestone 5 -->
+                <div class="relative">
+                    <div class="flex items-center mb-4">
+                        <div class="w-1/2 pr-8 text-right">
+                            <h3 class="text-xl font-semibold">Viva</h3>
+                            <p class="text-gray-600">June 10, 2025</p>
+                        </div>
+                        <div class="absolute left-1/2 transform -translate-x-1/2 w-8 h-8 rounded-full bg-blue-500 border-4 border-white"></div>
+                        <div class="w-1/2 pl-8">
+                            <p class="font-medium">Marks: 20%</p>
+                        </div>
+                    </div>
+                    <div class="flex">
+                        <div class="w-1/2"></div>
+                        <div class="w-1/2 pl-8">
+                            <p class="text-gray-700">Oral examination to defend the research project and demonstrate the implemented system.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Documents Section -->
+    <section id="documents" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Project Documents</h2>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md transition">
+                    <div class="flex items-center mb-4">
+                        <i class="far fa-file-alt text-3xl text-blue-500 mr-4"></i>
+                        <div>
+                            <h3 class="text-xl font-semibold">Project Charter</h3>
+                            <p class="text-gray-600 text-sm">Last updated: January 10, 2025</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-4">Outlines project scope, objectives, stakeholders, and success criteria.</p>
+                    <a href="#" class="text-blue-600 hover:text-blue-800 font-medium flex items-center">
+                        <span>Download PDF</span>
+                        <i class="fas fa-download ml-2"></i>
+                    </a>
+                </div>
+                
+                <div class="bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md transition">
+                    <div class="flex items-center mb-4">
+                        <i class="far fa-file-alt text-3xl text-blue-500 mr-4"></i>
+                        <div>
+                            <h3 class="text-xl font-semibold">Proposal Document</h3>
+                            <p class="text-gray-600 text-sm">Last updated: January 15, 2025</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-4">Complete research proposal with literature review and methodology.</p>
+                    <a href="#" class="text-blue-600 hover:text-blue-800 font-medium flex items-center">
+                        <span>Download PDF</span>
+                        <i class="fas fa-download ml-2"></i>
+                    </a>
+                </div>
+                
+                <div class="bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md transition">
+                    <div class="flex items-center mb-4">
+                        <i class="far fa-file-alt text-3xl text-blue-500 mr-4"></i>
+                        <div>
+                            <h3 class="text-xl font-semibold">Project Requirements</h3>
+                            <p class="text-gray-600 text-sm">Last updated: February 5, 2025</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-4">Detailed functional and non-functional requirements for the DLP system.</p>
+                    <a href="#" class="text-blue-600 hover:text-blue-800 font-medium flex items-center">
+                        <span>Download PDF</span>
+                        <i class="fas fa-download ml-2"></i>
+                    </a>
+                </div>
+                
+                <div class="bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md transition">
+                    <div class="flex items-center mb-4">
+                        <i class="far fa-file-alt text-3xl text-blue-500 mr-4"></i>
+                        <div>
+                            <h3 class="text-xl font-semibold">Progress Report 1</h3>
+                            <p class="text-gray-600 text-sm">Last updated: February 28, 2025</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-4">First progress report detailing initial implementation and challenges.</p>
+                    <a href="#" class="text-blue-600 hover:text-blue-800 font-medium flex items-center">
+                        <span>Download PDF</span>
+                        <i class="fas fa-download ml-2"></i>
+                    </a>
+                </div>
+                
+                <div class="bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md transition">
+                    <div class="flex items-center mb-4">
+                        <i class="far fa-file-alt text-3xl text-blue-500 mr-4"></i>
+                        <div>
+                            <h3 class="text-xl font-semibold">Progress Report 2</h3>
+                            <p class="text-gray-600 text-sm">Last updated: April 10, 2025</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-4">Second progress report with prototype results and performance metrics.</p>
+                    <a href="#" class="text-blue-600 hover:text-blue-800 font-medium flex items-center">
+                        <span>Download PDF</span>
+                        <i class="fas fa-download ml-2"></i>
+                    </a>
+                </div>
+                
+                <div class="bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md transition">
+                    <div class="flex items-center mb-4">
+                        <i class="far fa-file-alt text-3xl text-blue-500 mr-4"></i>
+                        <div>
+                            <h3 class="text-xl font-semibold">Final Document</h3>
+                            <p class="text-gray-600 text-sm">Coming soon: May 25, 2025</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-4">Complete research paper with implementation details and results.</p>
+                    <span class="text-gray-500 font-medium flex items-center">
+                        <span>Pending</span>
+                        <i class="fas fa-clock ml-2"></i>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Presentations Section -->
+    <section id="presentations" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Presentations</h2>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-lg shadow overflow-hidden">
+                    <div class="h-48 bg-blue-100 flex items-center justify-center">
+                        <i class="fas fa-file-powerpoint text-5xl text-blue-500"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Proposal Presentation</h3>
+                        <p class="text-gray-600 mb-4">January 15, 2025</p>
+                        <p class="text-gray-700 mb-4">Initial project proposal presentation outlining research objectives and methodology.</p>
+                        <a href="#" class="text-blue-600 hover:text-blue-800 font-medium flex items-center">
+                            <span>Download Slides</span>
+                            <i class="fas fa-download ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow overflow-hidden">
+                    <div class="h-48 bg-blue-100 flex items-center justify-center">
+                        <i class="fas fa-file-powerpoint text-5xl text-blue-500"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Progress Presentation 1</h3>
+                        <p class="text-gray-600 mb-4">February 28, 2025</p>
+                        <p class="text-gray-700 mb-4">First progress update with literature survey findings and system architecture.</p>
+                        <a href="#" class="text-blue-600 hover:text-blue-800 font-medium flex items-center">
+                            <span>Download Slides</span>
+                            <i class="fas fa-download ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow overflow-hidden">
+                    <div class="h-48 bg-blue-100 flex items-center justify-center">
+                        <i class="fas fa-file-powerpoint text-5xl text-blue-500"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Progress Presentation 2</h3>
+                        <p class="text-gray-600 mb-4">April 10, 2025</p>
+                        <p class="text-gray-700 mb-4">Second progress update showcasing prototype implementation and preliminary results.</p>
